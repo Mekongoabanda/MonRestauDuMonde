@@ -12,6 +12,8 @@
 		44369BBB24450581004ECF27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44369BB924450581004ECF27 /* Main.storyboard */; };
 		44369BBD24450583004ECF27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44369BBC24450583004ECF27 /* Assets.xcassets */; };
 		44369BC024450583004ECF27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44369BBE24450583004ECF27 /* LaunchScreen.storyboard */; };
+		44C3F14B24524948000029E3 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C3F14A24524948000029E3 /* MenuController.swift */; };
+		44C3F14D24524A1A000029E3 /* ALaCarteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C3F14C24524A1A000029E3 /* ALaCarteController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		44369BBC24450583004ECF27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44369BBF24450583004ECF27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44369BC124450583004ECF27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44C3F14A24524948000029E3 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		44C3F14C24524A1A000029E3 /* ALaCarteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALaCarteController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,9 @@
 		44369BB224450581004ECF27 /* MonRestauDuMonde */ = {
 			isa = PBXGroup;
 			children = (
+				44369BC924450C5F004ECF27 /* Controlleur */,
+				44369BC824450C59004ECF27 /* Vue */,
+				44369BC724450C53004ECF27 /* Model */,
 				44369BB324450581004ECF27 /* AppDelegate.swift */,
 				44369BB524450581004ECF27 /* SceneDelegate.swift */,
 				44369BB924450581004ECF27 /* Main.storyboard */,
@@ -62,6 +69,29 @@
 				44369BC124450583004ECF27 /* Info.plist */,
 			);
 			path = MonRestauDuMonde;
+			sourceTree = "<group>";
+		};
+		44369BC724450C53004ECF27 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		44369BC824450C59004ECF27 /* Vue */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vue;
+			sourceTree = "<group>";
+		};
+		44369BC924450C5F004ECF27 /* Controlleur */ = {
+			isa = PBXGroup;
+			children = (
+				44C3F14A24524948000029E3 /* MenuController.swift */,
+				44C3F14C24524A1A000029E3 /* ALaCarteController.swift */,
+			);
+			path = Controlleur;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +165,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44C3F14D24524A1A000029E3 /* ALaCarteController.swift in Sources */,
 				44369BB424450581004ECF27 /* AppDelegate.swift in Sources */,
+				44C3F14B24524948000029E3 /* MenuController.swift in Sources */,
 				44369BB624450581004ECF27 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
