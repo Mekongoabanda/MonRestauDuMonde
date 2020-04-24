@@ -14,9 +14,9 @@ class MonTabBar: UITabBarController {
         super.viewDidLoad()
 
         //Couleur de notre tabBar
-        tabBar.barTintColor = GRIS_TRES_FONCE
+        tabBar.barTintColor = VERT_WEM
         //couleur des icône de la tabBar
-        tabBar.tintColor = GRIS_TRES_CLAIR
+        tabBar.tintColor = OR
         
         
         
