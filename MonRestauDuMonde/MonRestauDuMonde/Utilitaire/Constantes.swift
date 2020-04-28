@@ -19,7 +19,7 @@ let OR = UIColor(red: 255, green: 204, blue: 0, alpha: 1)
 let FONT_DE_BASE = UIFont(name: "Chalkduster", size: 20)
 
 
-//Convertir coouleur hexadécimal
+//Convertir couleur hexadécimal
 extension UIColor {
     convenience init(hexString: String) {
         let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)

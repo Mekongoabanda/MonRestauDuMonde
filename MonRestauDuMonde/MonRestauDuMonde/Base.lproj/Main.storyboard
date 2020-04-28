@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,10 +15,42 @@
                     <view key="view" contentMode="scaleToFill" id="DBW-8p-YVd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Tzi-hO-4D1">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="n2l-wc-8h3">
+                                    <size key="itemSize" width="171" height="143"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MenuCell" id="IDQ-74-h7x" customClass="MenuCell" customModule="MonRestauDuMonde" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="171" height="143"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rMB-fT-mTR">
+                                            <rect key="frame" x="0.0" y="0.0" width="171" height="143"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="171" height="143"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="SmE-sV-0F3" firstAttribute="trailing" secondItem="Tzi-hO-4D1" secondAttribute="trailing" id="A9h-JI-II7"/>
+                            <constraint firstItem="Tzi-hO-4D1" firstAttribute="top" secondItem="SmE-sV-0F3" secondAttribute="top" id="OL6-iA-EIx"/>
+                            <constraint firstItem="SmE-sV-0F3" firstAttribute="bottom" secondItem="Tzi-hO-4D1" secondAttribute="bottom" id="jKR-mM-5fg"/>
+                            <constraint firstItem="Tzi-hO-4D1" firstAttribute="leading" secondItem="SmE-sV-0F3" secondAttribute="leading" id="nbF-TP-CKM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="SmE-sV-0F3"/>
                     </view>
                     <navigationItem key="navigationItem" id="CYb-GG-bLc"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Tzi-hO-4D1" id="vWP-M6-AOe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5oJ-D7-5hT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
