@@ -18,6 +18,15 @@ let OR = UIColor(red: 255, green: 204, blue: 0, alpha: 1)
 
 let FONT_DE_BASE = UIFont(name: "Chalkduster", size: 20)
 
+//Constantes pour définir le nom des pays
+let ITALIE = "Italien"
+let CHINE = "CHINOIS"
+let JAPON = "Japon"
+let USA = "Américain"
+let MEXIQUE = "Mexique"
+let ESPAGNE = "Espagne"
+let SUISSE = "Suisse"
+
 
 //Convertir couleur hexadécimal
 extension UIColor {

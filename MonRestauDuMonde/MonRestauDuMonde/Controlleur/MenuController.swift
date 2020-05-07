@@ -14,6 +14,8 @@ UICollectionViewDelegateFlowLayout {
     
     let cellId = "MenuCell"
     
+    var menus = [Menu]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,18 +24,29 @@ UICollectionViewDelegateFlowLayout {
         collectionView.delegate = self
         collectionView.dataSource = self
         
+        //On met notre couleur dégradée crée dans le fichier.swift "dégradé"
+        let vue = UIView(frame: collectionView.bounds)
+        vue.layer.addSublayer(Degrade())
+        collectionView.backgroundView = vue
+        
+        menus = LesPlats.obtenir.lesMenus()
+        collectionView.reloadData()
+        
     }
     
     //Fonction qui retourne le nombre de vue que UICollectionView doit afficher
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return menus.count
     }
     
     //Fonction qui nous retourne la vue
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        //On récupère nos items
+        let menu = menus[indexPath.item]
+        
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as? MenuCell
         {
-            cell.backgroundColor = GRIS_TRES_FONCE
+            cell.miseEnPlace(menu: menu)
             return cell
         }
         return UICollectionViewCell()
